@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const { Post } = require("../Models");
-const withAuth = require("../Utils/auth");
+const { Post } = require("../models");
+const withAuth = require("../utils/auth");
 
 router.get("/", withAuth, (req, res) => {
     Post.findAll({
@@ -13,7 +13,7 @@ router.get("/", withAuth, (req, res) => {
         
         res.render("all-posts-admin", {
           layout: "dashboard",
-          posts
+          posts,
         });
       })
       .catch(err => {

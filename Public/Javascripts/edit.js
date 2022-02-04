@@ -1,3 +1,4 @@
+const postId = document.getElementById('post-id');
 
 const editFormHandler = async function(event) {
     event.preventDefault();
@@ -5,20 +6,20 @@ const editFormHandler = async function(event) {
     
     const titleEl = document.getElementById('post-title');
     const bodyEl = document.getElementById('post-body');
-    const postId = document.getElementById('post-id')
 
-    fetch("/api/post/" + postId.value, {
-        method: "put", 
+
+    await fetch(`/api/post/${postId}`, {
+        method: 'PUT',
         body: JSON.stringify({
-            title: titleEl.value,
-            body: bodyEl.value
+          titleEl,
+          bodyEl
         }),
-        headers: { "Content-Type": "application/json"}
-    })
-        .then(function() {
-            document.location.replace("/dashboard");
-        })
-        .catch(err => console.log(err))
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+    
+      document.location.replace('/dashboard');
 }
 
 document.querySelector("#edit-post-form").addEventListener("submit", editFormHandler);
