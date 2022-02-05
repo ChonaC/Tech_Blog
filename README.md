@@ -46,6 +46,8 @@ Comment Post
 
 * [Video Walkthrough][videoWT]
 
+* [Heroku Deployement][heroku-deploy] ( Tried to deploy to heroku but I am having troubles. I've connected it with JAWSDB_URL already but it is having a hard time connect. The application does deploy on localhost:3001 without any issues. )
+
 
 ## Questions
 Please feel free to ask questions on my GitHub [ChonaC][github-chona].
@@ -58,5 +60,5 @@ Please feel free to ask questions on my GitHub [ChonaC][github-chona].
 [github-chona]: https://github.com/ChonaC
 [videoWT]: https://drive.google.com/file/d/17b-DPONeSpTGaTcHd3pBkV5mQRZn4ZFX/view
 [github-repo]: https://github.com/ChonaC/Tech_Blog
-[heroku-deploy]: 
+[heroku-deploy]: https://tech-blog12345.herokuapp.com/ 
 
